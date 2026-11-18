@@ -82,90 +82,384 @@
     <div class="wrap">
       <div class="section-head">
         <h2>🎛️ 작업실 추천 장비</h2>
-        <p>무료 플러그인 받으면서 장비까지 한 번에 정리하세요. <strong>가성비 입문 픽</strong>과 <strong>현업 프로 픽</strong>으로 나눠 봤습니다. (헤드폰·스피커·마이크·건반·오인페)</p>
+        <p>무료 플러그인 받으면서 장비까지 한 번에 정리하세요. <strong>카테고리 → 입문·프로 → 가격대</strong> 순서로 좁혀 보면 내 예산에 맞는 장비만 남습니다.</p>
       </div>
 
-      <div class="tabs" role="tablist" aria-label="장비 카테고리">
-        <button class="tab is-active" role="tab" aria-selected="true" data-filter="all">📦 전체</button>
-        <button class="tab" role="tab" aria-selected="false" data-filter="headphone">🎧 헤드폰</button>
-        <button class="tab" role="tab" aria-selected="false" data-filter="speaker">🔊 스피커</button>
-        <button class="tab" role="tab" aria-selected="false" data-filter="mic">🎙️ 마이크</button>
-        <button class="tab" role="tab" aria-selected="false" data-filter="keys">🎹 건반</button>
-        <button class="tab" role="tab" aria-selected="false" data-filter="interface">🎚️ 오인페</button>
+      <div class="gear-filter" role="group" aria-label="장비 필터">
+        <div class="filter-group">
+          <span class="filter-label">1. 카테고리</span>
+          <div class="tabs" role="tablist" aria-label="장비 카테고리">
+            <button class="tab is-active" role="tab" aria-selected="true" data-filter="all">📦 전체</button>
+            <button class="tab" role="tab" aria-selected="false" data-filter="headphone">🎧 헤드폰</button>
+            <button class="tab" role="tab" aria-selected="false" data-filter="speaker">🔊 스피커</button>
+            <button class="tab" role="tab" aria-selected="false" data-filter="mic">🎙️ 마이크</button>
+            <button class="tab" role="tab" aria-selected="false" data-filter="keys">🎹 건반</button>
+            <button class="tab" role="tab" aria-selected="false" data-filter="interface">🎚️ 오인페</button>
+          </div>
+        </div>
+
+        <div class="filter-split">
+          <div class="filter-group">
+            <span class="filter-label">2. 등급</span>
+            <div class="tier-toggle" role="group" aria-label="등급 필터">
+              <button class="tier-btn is-active" type="button" data-tier="all" aria-pressed="true"><span class="tier-name">전체</span></button>
+              <button class="tier-btn" type="button" data-tier="entry" aria-pressed="false"><span class="tier-name">🌱 가성비 입문</span><em class="tier-range">100만 미만</em></button>
+              <button class="tier-btn" type="button" data-tier="pro" aria-pressed="false"><span class="tier-name">🏆 현업 프로</span><em class="tier-range">100만 이상</em></button>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-label">3. 가격대</span>
+            <div class="chips" role="group" aria-label="세부 가격대" data-active-tier="all">
+              <button class="chip is-active" type="button" data-band="all" aria-pressed="true">전체 가격</button>
+              <span class="chip-sep" data-band-tier="entry">입문</span>
+              <button class="chip" type="button" data-band="e1" data-band-tier="entry" aria-pressed="false">~20만</button>
+              <button class="chip" type="button" data-band="e2" data-band-tier="entry" aria-pressed="false">20~50만</button>
+              <button class="chip" type="button" data-band="e3" data-band-tier="entry" aria-pressed="false">50~100만</button>
+              <span class="chip-sep" data-band-tier="pro">프로</span>
+              <button class="chip" type="button" data-band="p1" data-band-tier="pro" aria-pressed="false">100~150만</button>
+              <button class="chip" type="button" data-band="p2" data-band-tier="pro" aria-pressed="false">150~200만</button>
+              <button class="chip" type="button" data-band="p3" data-band-tier="pro" aria-pressed="false">200만+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gear-status">
+          <strong id="gear-count" aria-live="polite">총 40개 장비</strong>
+          <span class="gear-status-note">가격은 2026. 11. 19. 쿠팡 판매가 기준 · 수시 변동</span>
+          <button type="button" class="gear-reset" data-reset hidden>필터 초기화 ↩</button>
+        </div>
       </div>
 
-      <div class="gear-grid">
+      <div class="gear-grid" id="gear-grid">
 
-        <article class="gear-card" data-cat="headphone">
+        <article class="gear-card" data-category="headphone" data-tier="entry" data-price="128000" data-band="e1">
           <div class="gear-head"><span class="cat">🎧 헤드폰</span><span class="tier tier-budget">가성비 입문</span></div>
           <h3>MDR-7506 <span class="maker">(Sony)</span></h3>
+          <p class="gear-price">128,000원</p>
           <p class="gear-desc">모니터링의 기준점 같은 헤드폰. 접어서 가방에 넣고 다니기도 좋습니다.</p>
-          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">추천 링크 준비 중 (쿠팡 파트너스 연동 예정)</button>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
         </article>
 
-        <article class="gear-card" data-cat="headphone">
-          <div class="gear-head"><span class="cat">🎧 헤드폰</span><span class="tier tier-pro">현업 프로</span></div>
+        <article class="gear-card" data-category="headphone" data-tier="entry" data-price="141550" data-band="e1">
+          <div class="gear-head"><span class="cat">🎧 헤드폰</span><span class="tier tier-budget">가성비 입문</span></div>
+          <h3>ATH-M40x <span class="maker">(Audio-Technica)</span></h3>
+          <p class="gear-price">141,550원</p>
+          <p class="gear-desc">M50x보다 평평한 성향. 오래 듣고 판단하기 좋은 밀폐형입니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="headphone" data-tier="entry" data-price="206800" data-band="e2">
+          <div class="gear-head"><span class="cat">🎧 헤드폰</span><span class="tier tier-budget">가성비 입문</span></div>
+          <h3>ATH-M50x <span class="maker">(Audio-Technica)</span></h3>
+          <p class="gear-price">206,800원</p>
+          <p class="gear-desc">저음이 단단해 작업 리듬이 잘 잡힙니다. 리뷰 790개대의 스테디셀러.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="headphone" data-tier="entry" data-price="350000" data-band="e2">
+          <div class="gear-head"><span class="cat">🎧 헤드폰</span><span class="tier tier-budget">가성비 입문</span></div>
           <h3>HD 600 <span class="maker">(Sennheiser)</span></h3>
-          <p class="gear-desc">오래 들어도 안 피로한 오픈형. 믹스 밸런스 잡을 때 가장 믿는 소리.</p>
-          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">추천 링크 준비 중 (쿠팡 파트너스 연동 예정)</button>
+          <p class="gear-price">350,000원</p>
+          <p class="gear-desc">오래 들어도 안 피로한 오픈형. 이 가격대에서 가장 믿는 소리.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
         </article>
 
-        <article class="gear-card" data-cat="speaker">
+        <article class="gear-card" data-category="headphone" data-tier="pro" data-price="1132240" data-band="p1">
+          <div class="gear-head"><span class="cat">🎧 헤드폰</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>DT 1770 PRO MK II <span class="maker">(Beyerdynamic)</span></h3>
+          <p class="gear-price">1,132,240원</p>
+          <p class="gear-desc">밀폐형인데 무대가 넓습니다. 녹음 부스 모니터링에 좋습니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="headphone" data-tier="pro" data-price="1320000" data-band="p1">
+          <div class="gear-head"><span class="cat">🎧 헤드폰</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>NDH 30 <span class="maker">(Neumann)</span></h3>
+          <p class="gear-price">1,320,000원</p>
+          <p class="gear-desc">노이만의 오픈형 모니터. 중역이 평평해 판단이 빨라집니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="headphone" data-tier="pro" data-price="2140000" data-band="p3">
+          <div class="gear-head"><span class="cat">🎧 헤드폰</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>Clear MG Professional <span class="maker">(Focal)</span></h3>
+          <p class="gear-price">2,140,000원</p>
+          <p class="gear-desc">해상도와 다이내믹을 함께. 마스터 확인용 오픈형입니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="headphone" data-tier="pro" data-price="2240000" data-band="p3">
+          <div class="gear-head"><span class="cat">🎧 헤드폰</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>HD 800S <span class="maker">(Sennheiser)</span></h3>
+          <p class="gear-price">2,240,000원</p>
+          <p class="gear-desc">공간감의 끝판. 마지막 확인 단계에서 쓰는 헤드폰입니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="speaker" data-tier="entry" data-price="73800" data-band="e1">
           <div class="gear-head"><span class="cat">🔊 스피커</span><span class="tier tier-budget">가성비 입문</span></div>
           <h3>MR4 <span class="maker">(Edifier)</span></h3>
-          <p class="gear-desc">책상 위 모니터 스피커 입문용. 이 가격에 밸런스가 이 정도인 게 신기한 모델입니다.</p>
-          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">추천 링크 준비 중 (쿠팡 파트너스 연동 예정)</button>
+          <p class="gear-price">73,800원</p>
+          <p class="gear-desc">책상 위 모니터 스피커 입문용. 이 가격에 밸런스가 이 정도인 게 신기합니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
         </article>
 
-        <article class="gear-card" data-cat="speaker">
-          <div class="gear-head"><span class="cat">🔊 스피커</span><span class="tier tier-pro">현업 프로</span></div>
+        <article class="gear-card" data-category="speaker" data-tier="entry" data-price="151000" data-band="e1">
+          <div class="gear-head"><span class="cat">🔊 스피커</span><span class="tier tier-budget">가성비 입문</span></div>
+          <h3>CR3.5 3세대 <span class="maker">(Mackie)</span></h3>
+          <p class="gear-price">151,000원</p>
+          <p class="gear-desc">작은 방 데스크에 딱 맞는 3.5인치. 첫 모니터로 무난합니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="speaker" data-tier="entry" data-price="219000" data-band="e2">
+          <div class="gear-head"><span class="cat">🔊 스피커</span><span class="tier tier-budget">가성비 입문</span></div>
+          <h3>Eris 3.5 <span class="maker">(PreSonus)</span></h3>
+          <p class="gear-price">219,000원</p>
+          <p class="gear-desc">중저음을 살짝 부풀린 튜닝. 듣기 편하고 작업도 됩니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="speaker" data-tier="entry" data-price="630000" data-band="e3">
+          <div class="gear-head"><span class="cat">🔊 스피커</span><span class="tier tier-budget">가성비 입문</span></div>
           <h3>HS5 <span class="maker">(Yamaha)</span></h3>
+          <p class="gear-price">630,000원</p>
           <p class="gear-desc">국룰 모니터. 소리가 정직해서 내 믹스의 문제가 그대로 들립니다.</p>
-          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">추천 링크 준비 중 (쿠팡 파트너스 연동 예정)</button>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
         </article>
 
-        <article class="gear-card" data-cat="mic">
+        <article class="gear-card" data-category="speaker" data-tier="pro" data-price="1105000" data-band="p1">
+          <div class="gear-head"><span class="cat">🔊 스피커</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>8030C (1통) <span class="maker">(Genelec)</span></h3>
+          <p class="gear-price">1,105,000원</p>
+          <p class="gear-desc">업계 표준에 가까운 5인치. 1통 가격이라 스테레오는 2통이 필요합니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="speaker" data-tier="pro" data-price="1250000" data-band="p1">
+          <div class="gear-head"><span class="cat">🔊 스피커</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>A7V <span class="maker">(Adam Audio)</span></h3>
+          <p class="gear-price">1,250,000원</p>
+          <p class="gear-desc">리본 트위터의 해상도. 고역 판단이 확실해집니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="speaker" data-tier="pro" data-price="1840000" data-band="p2">
+          <div class="gear-head"><span class="cat">🔊 스피커</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>KH 80 DSP (1조) <span class="maker">(Neumann)</span></h3>
+          <p class="gear-price">1,840,000원</p>
+          <p class="gear-desc">DSP 보정이 들어간 4인치. 좁은 방에서 특히 강합니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="speaker" data-tier="pro" data-price="2360000" data-band="p3">
+          <div class="gear-head"><span class="cat">🔊 스피커</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>8030C 1조 (2통) <span class="maker">(Genelec)</span></h3>
+          <p class="gear-price">2,360,000원</p>
+          <p class="gear-desc">8030C 스테레오 한 조. 한 번에 갖추려면 이쪽이 낫습니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="mic" data-tier="entry" data-price="99560" data-band="e1">
+          <div class="gear-head"><span class="cat">🎙️ 마이크</span><span class="tier tier-budget">가성비 입문</span></div>
+          <h3>SM58SK <span class="maker">(Shure)</span></h3>
+          <p class="gear-price">99,560원</p>
+          <p class="gear-desc">스테이지도 작업실도 버티는 다이내믹. 첫 마이크로 가장 무난합니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="mic" data-tier="entry" data-price="130000" data-band="e1">
           <div class="gear-head"><span class="cat">🎙️ 마이크</span><span class="tier tier-budget">가성비 입문</span></div>
           <h3>AT2020 <span class="maker">(Audio-Technica)</span></h3>
+          <p class="gear-price">130,000원</p>
           <p class="gear-desc">콘덴서 마이크 입문의 정석. 보컬·기타 다 잘 받습니다.</p>
-          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">추천 링크 준비 중 (쿠팡 파트너스 연동 예정)</button>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
         </article>
 
-        <article class="gear-card" data-cat="mic">
-          <div class="gear-head"><span class="cat">🎙️ 마이크</span><span class="tier tier-pro">현업 프로</span></div>
+        <article class="gear-card" data-category="mic" data-tier="entry" data-price="220000" data-band="e2">
+          <div class="gear-head"><span class="cat">🎙️ 마이크</span><span class="tier tier-budget">가성비 입문</span></div>
+          <h3>C104 (+H81 스탠드) <span class="maker">(AKG)</span></h3>
+          <p class="gear-price">220,000원</p>
+          <p class="gear-desc">스탠드까지 세트. 좁은 공간 보컬 녹음에 쓰기 좋습니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="mic" data-tier="entry" data-price="799000" data-band="e3">
+          <div class="gear-head"><span class="cat">🎙️ 마이크</span><span class="tier tier-budget">가성비 입문</span></div>
           <h3>SM7B <span class="maker">(Shure)</span></h3>
+          <p class="gear-price">799,000원</p>
           <p class="gear-desc">방음 안 된 방에서도 보컬·나레이션 뽑는 다이내믹. 게인 넉넉한 오인페와 함께.</p>
-          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">추천 링크 준비 중 (쿠팡 파트너스 연동 예정)</button>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
         </article>
 
-        <article class="gear-card" data-cat="keys">
+        <article class="gear-card" data-category="mic" data-tier="pro" data-price="1098000" data-band="p1">
+          <div class="gear-head"><span class="cat">🎙️ 마이크</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>WA-87 R2 <span class="maker">(Warm Audio)</span></h3>
+          <p class="gear-price">1,098,000원</p>
+          <p class="gear-desc">U87 계열 복각 콘덴서. 보컬 톤이 두껍게 잡힙니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="mic" data-tier="pro" data-price="1390000" data-band="p1">
+          <div class="gear-head"><span class="cat">🎙️ 마이크</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>TLM 102 Studio Set <span class="maker">(Neumann)</span></h3>
+          <p class="gear-price">1,390,000원</p>
+          <p class="gear-desc">노이만 입문 콘덴서. 작은 방에서도 저역이 과하지 않습니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="mic" data-tier="pro" data-price="1872000" data-band="p2">
+          <div class="gear-head"><span class="cat">🎙️ 마이크</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>C414 XL2 <span class="maker">(AKG)</span></h3>
+          <p class="gear-price">1,872,000원</p>
+          <p class="gear-desc">패턴 전환이 자유로운 만능 콘덴서. 리뷰 85개의 검증된 모델.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="mic" data-tier="pro" data-price="2620000" data-band="p3">
+          <div class="gear-head"><span class="cat">🎙️ 마이크</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>TLM 103 Studio Set <span class="maker">(Neumann)</span></h3>
+          <p class="gear-price">2,620,000원</p>
+          <p class="gear-desc">보컬 원툴로 쓰는 노이만. 한 번 사면 오래 갑니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="keys" data-tier="entry" data-price="116000" data-band="e1">
           <div class="gear-head"><span class="cat">🎹 건반</span><span class="tier tier-budget">가성비 입문</span></div>
           <h3>MPK Mini MK3 <span class="maker">(Akai)</span></h3>
+          <p class="gear-price">116,000원</p>
           <p class="gear-desc">책상 위에 올려 두기 좋은 미니 건반. 패드로 드럼 찍기도 편합니다.</p>
-          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">추천 링크 준비 중 (쿠팡 파트너스 연동 예정)</button>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
         </article>
 
-        <article class="gear-card" data-cat="keys">
+        <article class="gear-card" data-category="keys" data-tier="entry" data-price="387000" data-band="e2">
+          <div class="gear-head"><span class="cat">🎹 건반</span><span class="tier tier-budget">가성비 입문</span></div>
+          <h3>KeyLab Essential 3 61 <span class="maker">(Arturia)</span></h3>
+          <p class="gear-price">387,000원</p>
+          <p class="gear-desc">61건반에 노브·페이더까지. 가상악기 컨트롤을 손에서 끝냅니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="keys" data-tier="entry" data-price="495000" data-band="e2">
+          <div class="gear-head"><span class="cat">🎹 건반</span><span class="tier tier-budget">가성비 입문</span></div>
+          <h3>Launchkey 61 Mk4 <span class="maker">(Novation)</span></h3>
+          <p class="gear-price">495,000원</p>
+          <p class="gear-desc">에이블톤과 붙여 쓰기 좋은 61건반. 스케일·코드 모드가 편합니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="keys" data-tier="entry" data-price="615000" data-band="e3">
+          <div class="gear-head"><span class="cat">🎹 건반</span><span class="tier tier-budget">가성비 입문</span></div>
+          <h3>KeyLab Essential 88 MK3 <span class="maker">(Arturia)</span></h3>
+          <p class="gear-price">615,000원</p>
+          <p class="gear-desc">풀사이즈 88건반을 100만 아래에서. 피아노 파트 작업에 좋습니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="keys" data-tier="pro" data-price="1049000" data-band="p1">
           <div class="gear-head"><span class="cat">🎹 건반</span><span class="tier tier-pro">현업 프로</span></div>
-          <h3>KeyLab Essential <span class="maker">(Arturia)</span></h3>
-          <p class="gear-desc">피아노 연주감과 노브·페이더까지. 가상악기 컨트롤을 손에서 끝냅니다.</p>
-          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">추천 링크 준비 중 (쿠팡 파트너스 연동 예정)</button>
+          <h3>SL73 MK2 <span class="maker">(Studiologic)</span></h3>
+          <p class="gear-price">1,049,000원</p>
+          <p class="gear-desc">해머액션 73건반. 무게 대비 연주감이 좋습니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
         </article>
 
-        <article class="gear-card" data-cat="interface">
+        <article class="gear-card" data-category="keys" data-tier="pro" data-price="1192590" data-band="p1">
+          <div class="gear-head"><span class="cat">🎹 건반</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>A-88MKII <span class="maker">(Roland)</span></h3>
+          <p class="gear-price">1,192,590원</p>
+          <p class="gear-desc">무대용으로도 쓰는 88건반. 키감이 단단합니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="keys" data-tier="pro" data-price="1690000" data-band="p2">
+          <div class="gear-head"><span class="cat">🎹 건반</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>KeyLab 88 MK3 <span class="maker">(Arturia)</span></h3>
+          <p class="gear-price">1,690,000원</p>
+          <p class="gear-desc">해머액션 88건반에 아투리아 통합까지. 작업실 메인 건반으로.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="keys" data-tier="pro" data-price="2150000" data-band="p3">
+          <div class="gear-head"><span class="cat">🎹 건반</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>Komplete Kontrol S88 MK3 <span class="maker">(Native Instruments)</span></h3>
+          <p class="gear-price">2,150,000원</p>
+          <p class="gear-desc">NI 가상악기와 완전히 붙는 88건반. 브라우징이 편해집니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="interface" data-tier="entry" data-price="219000" data-band="e2">
           <div class="gear-head"><span class="cat">🎚️ 오인페</span><span class="tier tier-budget">가성비 입문</span></div>
-          <h3>iD4 MKII <span class="maker">(Audient)</span></h3>
+          <h3>Scarlett Solo 4세대 <span class="maker">(Focusrite)</span></h3>
+          <p class="gear-price">219,000원</p>
+          <p class="gear-desc">입문의 정석 1채널. 마이크 하나로 시작할 때 가장 무난합니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="interface" data-tier="entry" data-price="284880" data-band="e2">
+          <div class="gear-head"><span class="cat">🎚️ 오인페</span><span class="tier tier-budget">가성비 입문</span></div>
+          <h3>iD4 MK2 <span class="maker">(Audient)</span></h3>
+          <p class="gear-price">284,880원</p>
           <p class="gear-desc">프리앰프 소리가 좋아 처음 쓰는 오인페로도 만족도가 높습니다.</p>
-          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">추천 링크 준비 중 (쿠팡 파트너스 연동 예정)</button>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
         </article>
 
-        <article class="gear-card" data-cat="interface">
+        <article class="gear-card" data-category="interface" data-tier="entry" data-price="305970" data-band="e2">
+          <div class="gear-head"><span class="cat">🎚️ 오인페</span><span class="tier tier-budget">가성비 입문</span></div>
+          <h3>Scarlett 2i2 4세대 <span class="maker">(Focusrite)</span></h3>
+          <p class="gear-price">305,970원</p>
+          <p class="gear-desc">2채널 입문 표준. 기타·보컬을 동시에 받기 좋습니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="interface" data-tier="entry" data-price="415840" data-band="e2">
+          <div class="gear-head"><span class="cat">🎚️ 오인페</span><span class="tier tier-budget">가성비 입문</span></div>
+          <h3>iD14 MK2 <span class="maker">(Audient)</span></h3>
+          <p class="gear-price">415,840원</p>
+          <p class="gear-desc">ADAT 확장까지 되는 2채널. 나중에 장비를 늘려도 그대로 씁니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="interface" data-tier="pro" data-price="1302210" data-band="p1">
           <div class="gear-head"><span class="cat">🎚️ 오인페</span><span class="tier tier-pro">현업 프로</span></div>
-          <h3>Apollo Solo <span class="maker">(Universal Audio)</span></h3>
-          <p class="gear-desc">UAD 플러그인을 녹음 단계에서 바로. 레이턴시 걱정 없이 작업합니다.</p>
-          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">추천 링크 준비 중 (쿠팡 파트너스 연동 예정)</button>
+          <h3>Clarett+ 8 Pre <span class="maker">(Focusrite)</span></h3>
+          <p class="gear-price">1,302,210원</p>
+          <p class="gear-desc">8채널 프리앰프. 드럼을 한 번에 받을 때 씁니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
         </article>
 
+        <article class="gear-card" data-category="interface" data-tier="pro" data-price="1386530" data-band="p1">
+          <div class="gear-head"><span class="cat">🎚️ 오인페</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>Babyface Pro FS <span class="maker">(RME)</span></h3>
+          <p class="gear-price">1,386,530원</p>
+          <p class="gear-desc">휴대용인데 소리는 스튜디오급. RME 드라이버의 안정성.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="interface" data-tier="pro" data-price="1590000" data-band="p2">
+          <div class="gear-head"><span class="cat">🎚️ 오인페</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>Apollo Twin X DUO Gen 2 <span class="maker">(Universal Audio)</span></h3>
+          <p class="gear-price">1,590,000원</p>
+          <p class="gear-desc">UAD 플러그인을 녹음 단계에서 바로. 레이턴시 걱정 없이 작업합니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+        <article class="gear-card" data-category="interface" data-tier="pro" data-price="2790000" data-band="p3">
+          <div class="gear-head"><span class="cat">🎚️ 오인페</span><span class="tier tier-pro">현업 프로</span></div>
+          <h3>Fireface UCX II <span class="maker">(RME)</span></h3>
+          <p class="gear-price">2,790,000원</p>
+          <p class="gear-desc">입출력·안정성 모두 프로 기준. 오래 쓰는 인터페이스입니다.</p>
+          <button class="btn btn-soon" type="button" disabled title="쿠팡 파트너스 연동 예정">파트너스 링크 준비 중</button>
+        </article>
+
+      </div>
+
+      <div class="gear-empty" id="gear-empty" hidden>
+        <span class="empty-emoji" aria-hidden="true">🔍</span>
+        <p class="empty-title">조건에 맞는 장비가 없습니다</p>
+        <p class="empty-sub">다른 카테고리나 가격대를 골라 보세요.</p>
+        <button type="button" class="btn btn-ghost gear-empty-reset" data-reset>전체 장비 보기</button>
       </div>
 
       <div class="gear-note">
