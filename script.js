@@ -68,11 +68,12 @@
     });
 
     // 보이는 카드만 가격 오름차순으로 정렬(같은 가격이면 원래 순서 유지).
+    // style.order가 아니라 DOM 순서를 바꿔 화면 순서와 낭독 순서를 맞춘다.
     visible.sort(function (a, b) {
       var d = priceOf(a) - priceOf(b);
       return d !== 0 ? d : cards.indexOf(a) - cards.indexOf(b);
     });
-    visible.forEach(function (card, i) { card.style.order = i; });
+    visible.forEach(function (card) { grid.appendChild(card); });
 
     if (countEl) countEl.textContent = '총 ' + visible.length + '개 장비';
     if (emptyEl) emptyEl.hidden = visible.length !== 0;
