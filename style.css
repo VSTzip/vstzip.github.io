@@ -152,6 +152,18 @@ section[id]{scroll-margin-top:84px}
   content:"";position:absolute;inset:0;border-radius:var(--radius);pointer-events:none;
   background:radial-gradient(420px 160px at 100% 0%,rgba(0,229,163,.13),transparent 65%);
 }
+.plugin-card.placeholder{
+  grid-column:1/-1;align-items:center;justify-content:center;text-align:center;
+  border-style:dashed;border-color:rgba(255,255,255,.14);
+  padding:42px 24px;background:linear-gradient(160deg,rgba(255,255,255,.02),rgba(255,255,255,0) 70%);
+  box-shadow:none;
+}
+.plugin-card.placeholder:hover{transform:none;border-color:rgba(0,229,163,.28);box-shadow:none}
+.placeholder-inner{display:flex;flex-direction:column;align-items:center;gap:10px;max-width:520px}
+.placeholder-emoji{font-size:30px;line-height:1}
+.placeholder-text{margin:0;font-size:16px;font-weight:800;letter-spacing:-.01em;color:var(--text)}
+.placeholder-sub{margin:0;font-size:13.5px;color:#8E99AB;line-height:1.65}
+.plugin-card.placeholder .btn{margin-top:6px}
 .plugin-card.urgent{border-color:rgba(255,122,122,.35)}
 .plugin-card.urgent::before{
   content:"";position:absolute;inset:0;border-radius:var(--radius);pointer-events:none;
