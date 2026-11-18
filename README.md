@@ -22,7 +22,7 @@
 <article class="gear-card" data-category="headphone" data-tier="entry" data-price="128000" data-band="e1">
 ```
 
-- `data-category`: `headphone` / `speaker` / `mic` / `keys` / `interface`
+- `data-category`: `headphone` / `speaker` / `mic` / `keys` / `piano` / `interface` / `headamp` / `desk` / `pc`
 - `data-tier`: `entry`(100만 원 미만) / `pro`(100만 원 이상)
 - `data-price`: 숫자만 (원). 표시 가격·정렬·가격대 판정에 함께 쓰입니다.
 - `data-band`: `e1`(~20만) · `e2`(20~50만) · `e3`(50~100만) · `p1`(100~150만) · `p2`(150~200만) · `p3`(200만+)
@@ -39,6 +39,6 @@
 
 ## 고지
 
-- 장비 구매 링크는 **쿠팡 파트너스 승인 후** 연결 예정이며, 현재 버튼은 `파트너스 링크 준비 중` 상태로 비활성입니다.
+- 장비 구매 링크는 모두 쿠팡 파트너스 단축 링크(`link.coupang.com/a/...`)이며, 파트너스 링크 생성이 제한된 상품(법적 사유·판매자 요청)은 목록에서 제외했습니다.
 - 장비 가격은 2026-11-19 쿠팡 판매가 기준이며 수시로 변동합니다.
 - 무료 배포 정보는 각 제작사 공식 페이지를 기준으로 정리하며, 기간은 업체 사정으로 조기 종료될 수 있습니다.
