@@ -385,6 +385,7 @@ section[id]{scroll-margin-top:84px}
   .section-head h2{font-size:20px}
   .plugin-grid,.gear-grid{grid-template-columns:1fr}
   .gear-filter{padding:14px 14px 10px;gap:12px}
+  .gear-filter .tabs{flex-wrap:wrap;overflow:visible;padding-bottom:0}
   .filter-split{grid-template-columns:1fr;gap:12px}
   .tier-btn{padding:9px 6px;font-size:11.5px}
   .tier-btn .tier-range{font-size:9.5px}
