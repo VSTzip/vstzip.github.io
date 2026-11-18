@@ -126,6 +126,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 
 /* ===== sections ===== */
 .section{padding:64px 0;border-top:1px solid var(--line)}
+section[id]{scroll-margin-top:84px}
 .section-alt{background:linear-gradient(180deg,rgba(255,255,255,.015),transparent 40%)}
 .section-head{max-width:680px;margin-bottom:28px}
 .section-head h2{
