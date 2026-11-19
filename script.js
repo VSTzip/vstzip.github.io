@@ -144,7 +144,7 @@
   });
 
   // 카테고리 목록은 index.html 카드의 data-category에서 그대로 읽는다
-  // (headphone·speaker·mic·keys·piano·interface·headamp·dac·pc·desk).
+  // (headphone·tw·twd·speaker·mic·keys·piano·interface·headamp·dac·pc·desk).
   // 탭에 카드가 하나도 없는 카테고리만 숨긴다.
   var counts = {};
   cards.forEach(function (c) {
