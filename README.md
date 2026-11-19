@@ -22,7 +22,7 @@
 <article class="gear-card" data-category="headphone" data-tier="entry" data-price="128000" data-band="e1">
 ```
 
-- `data-category`: `headphone` / `speaker` / `mic` / `keys` / `piano` / `interface` / `headamp` / `desk` / `pc`
+- `data-category`: `headphone` / `tw`(무선 이어폰) / `twd`(유선 이어폰) / `speaker` / `mic` / `keys` / `piano` / `interface` / `headamp` / `dac` / `desk` / `pc`
 - `data-tier`: `entry`(100만 원 미만) / `pro`(100만 원 이상)
 - `data-price`: 숫자만 (원). 표시 가격·정렬·가격대 판정에 함께 쓰입니다.
 - `data-band`: `e1`(~20만) · `e2`(20~50만) · `e3`(50~100만) · `p1`(100~150만) · `p2`(150~200만) · `p3`(200만+)
