@@ -1,0 +1,41 @@
+/* ===== VSTzip 繁體中文版（tw/）— 沿用主站 style.css，僅補中文字體與本頁專用樣式 ===== */
+
+body{
+  font-family:"PingFang TC","Noto Sans TC","Source Han Sans TC","Microsoft JhengHei","Hiragino Sans CNS",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  letter-spacing:0;
+}
+
+/* 中文標題字距比韓文寬一點更耐讀 */
+.hero h1{letter-spacing:-.01em}
+.section-head h2{letter-spacing:-.01em}
+.brand-text strong{letter-spacing:-.01em}
+
+/* 器材卡：沒有購買按鈕時，底部保留一行小字說明 */
+.gear-card .gear-spec{
+  margin:0;
+  font-size:12px;
+  color:#71717A;
+  line-height:1.55;
+}
+.gear-card{justify-content:flex-start}
+
+/* 器材清單上方的說明列 */
+.tw-hint{
+  margin:0 0 16px;
+  padding:11px 14px;
+  border-radius:var(--radius-sm);
+  background:var(--surface);
+  border:1px dashed var(--line-strong);
+  font-size:12.5px;
+  color:var(--muted);
+  line-height:1.65;
+}
+.tw-hint strong{color:var(--text)}
+
+/* 語言切換（頁尾） */
+.footer-links .lang-link{color:var(--muted);font-weight:700}
+.footer-links .lang-link:hover{color:var(--mint);text-decoration:underline}
+
+@media (max-width:720px){
+  .gear-card h3{font-size:16px}
+}
