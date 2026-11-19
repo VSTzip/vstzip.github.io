@@ -54,4 +54,7 @@ body{
   /* 和文は手動改行なしでも自然に折り返す */
   .br-m{display:none}
   .plugin-meta dt{width:58px}
+  /* カテゴリ12個を1画面に収めやすく、チップを小さくする */
+  .tabs{gap:6px}
+  .tab{font-size:12px;padding:7px 10px}
 }
