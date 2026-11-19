@@ -216,7 +216,7 @@ section[id]{scroll-margin-top:84px}
 
 /* ===== tabs ===== */
 .tabs{
-  display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:22px;
+  display:flex;flex-wrap:wrap;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:22px;
   scrollbar-width:none;
 }
 .tabs::-webkit-scrollbar{display:none}
