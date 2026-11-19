@@ -170,6 +170,7 @@ section[id]{scroll-margin-top:84px}
 .placeholder-text{margin:0;font-size:16px;font-weight:800;letter-spacing:-.01em;color:var(--text)}
 .placeholder-sub{margin:0;font-size:13.5px;color:var(--muted);line-height:1.65}
 .plugin-card.placeholder .btn{margin-top:6px}
+.plugin-card .btn-block + .btn-block{margin-top:8px}
 .plugin-card.urgent{border-color:rgba(220,38,38,.35)}
 .plugin-card.urgent::before{
   content:"";position:absolute;inset:0;border-radius:var(--radius);pointer-events:none;
