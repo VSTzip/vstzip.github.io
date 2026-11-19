@@ -1,0 +1,121 @@
+/* ===== VSTzip Vietnamese site (vi/) — loads ../style.css, adds Latin-script typography and page-only bits ===== */
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  letter-spacing:0;
+}
+
+/* Latin text reads better slightly tighter in display sizes, looser in body */
+.hero h1{letter-spacing:-.025em}
+.section-head h2{letter-spacing:-.02em}
+.brand-text strong{letter-spacing:-.015em}
+.hero-kicker{letter-spacing:.16em}
+.plugin-desc,.gear-desc,.section-head p,.hero-sub{letter-spacing:0}
+
+/* meta rows: "Format" / "Value" need a little more room than the Korean labels */
+.plugin-meta dt{width:52px}
+
+/* gear cards: photo → head → name → price → copy → spec → buy button */
+.gear-card{justify-content:flex-start;gap:8px}
+.gear-card .gear-spec{
+  margin:0;
+  font-size:12px;
+  color:#71717A;
+  line-height:1.55;
+}
+.gear-card .gear-buy{
+  margin-top:auto;
+  padding:11px 14px;
+  font-size:13px;
+}
+.gear-card .gear-price{
+  margin:0;
+  font-weight:800;
+  color:var(--text);
+  letter-spacing:-.01em;
+}
+.gear-card h3{line-height:1.3}
+
+/* Amazon Associates disclosure — required, so it stays visible but quiet */
+.amazon-disclosure{
+  margin:10px 0 0;
+  font-size:11.5px;
+  line-height:1.6;
+  color:#8A8F98;
+  letter-spacing:0;
+}
+.section-head .amazon-disclosure{margin-top:8px}
+
+/* note above the gear list */
+.vn-hint{
+  margin:0 0 16px;
+  padding:11px 14px;
+  border-radius:var(--radius-sm);
+  background:var(--surface);
+  border:1px dashed var(--line-strong);
+  font-size:12.5px;
+  color:var(--muted);
+  line-height:1.7;
+}
+.vn-hint strong{color:var(--text)}
+
+/* language switch (footer) */
+.footer-links .lang-link{color:var(--muted);font-weight:700}
+.footer-links .lang-link:hover{color:var(--mint);text-decoration:underline}
+
+.gear-note a{color:#92400E;font-weight:700}
+.gear-note a:hover{text-decoration:underline}
+
+/* 13 category chips: keep the row compact on desktop and swipeable on phones */
+.filter-group .tabs{gap:6px}
+.filter-group .tab{font-size:12.5px;padding:8px 13px}
+
+@media (max-width:720px){
+  .gear-card h3{font-size:16px}
+  .hero h1{font-size:25px}
+  /* English lines wrap on their own; the manual breaks would leave a stray word */
+  .br-m{display:none}
+  /* one swipeable row instead of seven wrapped ones */
+  .gear-filter .tabs{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:4px;
+    margin-right:-14px;
+    padding-right:14px;
+    scrollbar-width:none;
+  }
+  .gear-filter .tabs::-webkit-scrollbar{display:none}
+  .filter-group .tab{
+    font-size:12px;
+    padding:8px 12px;
+    white-space:nowrap;
+  }
+  .gear-card .gear-buy{font-size:13.5px;padding:12px 16px}
+}
+
+@media (max-width:420px){
+  .filter-group .tab{font-size:11.5px;padding:7px 10px}
+}
+
+/* Vietnamese / Spanish: partner notice instead of the Amazon line */
+.partner-disclosure{
+  margin:10px 0 0;
+  font-size:11.5px;
+  line-height:1.6;
+  color:#8A8F98;
+  letter-spacing:0;
+}
+
+/* no buy button yet: keep the card footer quiet but present */
+.gear-card .gear-buy-note{
+  margin:0;
+  padding:8px 10px;
+  border-radius:var(--radius-sm);
+  background:var(--surface);
+  border:1px dashed var(--line-strong);
+  font-size:11.5px;
+  line-height:1.5;
+  color:#71717A;
+  text-align:center;
+}
