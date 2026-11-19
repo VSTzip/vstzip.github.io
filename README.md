@@ -14,10 +14,11 @@
 | `script.js` | 장비 3단 필터 (카테고리 → 등급 → 가격대), 개수 표시, 빈 결과 안내 |
 | `tw/` | 繁體中文 페이지 (`/tw/`) — `index.html`·`style.css`·`script.js`, 무료 플러그인 2종 + 장비 14종 |
 | `en/` | 영문(미국·유럽) 페이지 (`/en/`) — 무료 플러그인 2종 + 장비 14종, 등급 기준 `entry`(< US$750) / `pro`(US$750+) |
+| `jp/` | 일본어 페이지 (`/jp/`) — 무료 플러그인 2종 + 장비 25종, 등급 기준 `entry`(¥100,000 미만) / `pro`(¥100,000 이상), 12개 카테고리 전체 |
 | `assets/logo.png` | 채널 테이프 머신 로고 (512px) |
 | `assets/products/` | 장비·플러그인 상품 사진 (400px JPEG) |
 
-언어별 페이지는 서로 `hreflang`(`ko` · `zh-Hant` · `en`, `x-default`→한국어)으로 연결되어 있고, 각 페이지 푸터에 언어 링크가 있습니다. `tw/`·`en/`은 `../style.css`를 먼저 불러오고 자기 `style.css`로 폰트·페이지 전용 스타일만 덮어씁니다. 장비 카드 속성 규칙은 아래와 같되, `en/`은 `data-category`가 `headphone` / `monitor` / `mic` / `interface` / `keys` / `dac`, `data-price`는 달러입니다.
+언어별 페이지는 서로 `hreflang`(`ko` · `zh-Hant` · `en` · `ja`, `x-default`→한국어)으로 연결되어 있고, 각 페이지 푸터에 언어 링크가 있습니다. `tw/`·`en/`·`jp/`은 `../style.css`를 먼저 불러오고 자기 `style.css`로 폰트·페이지 전용 스타일만 덮어씁니다. 장비 카드 속성 규칙은 아래와 같되, `en/`은 `data-category`가 `headphone` / `monitor` / `mic` / `interface` / `keys` / `dac`, `data-price`는 달러이고, `jp/`는 `data-category`가 `headphone` / `tw` / `twd` / `speaker` / `mic` / `headamp` / `dac` / `keys` / `piano` / `interface` / `pc` / `desk` 12종, `data-price`는 엔화입니다.
 
 ## 장비 카드 구조 (3단 필터)
 
