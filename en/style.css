@@ -1,0 +1,50 @@
+/* ===== VSTzip English site (en/) — loads ../style.css, adds Latin typography and page-only bits ===== */
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  letter-spacing:0;
+}
+
+/* Latin text reads better slightly tighter in display sizes, looser in body */
+.hero h1{letter-spacing:-.025em}
+.section-head h2{letter-spacing:-.02em}
+.brand-text strong{letter-spacing:-.015em}
+.hero-kicker{letter-spacing:.16em}
+.plugin-desc,.gear-desc,.section-head p,.hero-sub{letter-spacing:0}
+
+/* meta rows: "Format" / "Value" need a little more room than the Korean labels */
+.plugin-meta dt{width:52px}
+
+/* gear cards without a buy button: keep the spec line at the bottom */
+.gear-card .gear-spec{
+  margin:0;
+  font-size:12px;
+  color:#71717A;
+  line-height:1.55;
+}
+.gear-card{justify-content:flex-start}
+
+/* note above the gear list */
+.en-hint{
+  margin:0 0 16px;
+  padding:11px 14px;
+  border-radius:var(--radius-sm);
+  background:var(--surface);
+  border:1px dashed var(--line-strong);
+  font-size:12.5px;
+  color:var(--muted);
+  line-height:1.7;
+}
+.en-hint strong{color:var(--text)}
+
+/* language switch (footer) */
+.footer-links .lang-link{color:var(--muted);font-weight:700}
+.footer-links .lang-link:hover{color:var(--mint);text-decoration:underline}
+
+.gear-note a{color:#92400E;font-weight:700}
+.gear-note a:hover{text-decoration:underline}
+
+@media (max-width:720px){
+  .gear-card h3{font-size:16px}
+  .hero h1{font-size:26px}
+}
