@@ -58,6 +58,7 @@
         <a class="btn btn-ghost" href="#gear">🎛️ Browse gear picks</a>
       </div>
       <p class="updated">Info as of <time datetime="2026-11-20">Nov 20, 2026</time> · offers can end earlier than listed</p>
+      <p class="amazon-disclosure">As an Amazon Associate I earn from qualifying purchases.</p>
     </div>
   </section>
 
@@ -124,7 +125,8 @@
     <div class="wrap">
       <div class="section-head">
         <h2>🎛️ Studio &amp; mixing gear</h2>
-        <p>Two tiers first — <strong>Entry / Value</strong> under US$750, <strong>Pro Studio</strong> at US$750 and up — then the category you're filling. Every model below is a long-running best seller that studios in the US and Europe buy year after year.</p>
+        <p>Two tiers first — <strong>Entry / Value</strong> under US$1,000, <strong>Pro Studio</strong> at US$1,000 and up — then the category you're filling. 45 models across 12 categories: every one a long-running best seller on Amazon US, linked straight to the listing.</p>
+        <p class="amazon-disclosure">As an Amazon Associate I earn from qualifying purchases.</p>
       </div>
 
       <div class="gear-filter" role="group" aria-label="Gear filters">
@@ -133,8 +135,8 @@
             <span class="filter-label">1. TIER</span>
             <div class="tier-toggle" role="group" aria-label="Tier filter">
               <button class="tier-btn is-active" type="button" data-tier="all" aria-pressed="true"><span class="tier-name">All</span></button>
-              <button class="tier-btn" type="button" data-tier="entry" aria-pressed="false"><span class="tier-name">🌱 Entry / Value</span><em class="tier-range">&lt; US$750</em></button>
-              <button class="tier-btn" type="button" data-tier="pro" aria-pressed="false"><span class="tier-name">🏆 Pro Studio</span><em class="tier-range">US$750+</em></button>
+              <button class="tier-btn" type="button" data-tier="entry" aria-pressed="false"><span class="tier-name">🌱 Entry / Value</span><em class="tier-range">&lt; US$1,000</em></button>
+              <button class="tier-btn" type="button" data-tier="pro" aria-pressed="false"><span class="tier-name">🏆 Pro Studio</span><em class="tier-range">US$1,000+</em></button>
             </div>
           </div>
 
@@ -143,23 +145,29 @@
             <div class="tabs" role="tablist" aria-label="Gear categories">
               <button class="tab is-active" role="tab" aria-selected="true" data-filter="all">📦 All</button>
               <button class="tab" role="tab" aria-selected="false" data-filter="headphone">🎧 Headphones</button>
-              <button class="tab" role="tab" aria-selected="false" data-filter="monitor">🔊 Monitors</button>
+              <button class="tab" role="tab" aria-selected="false" data-filter="tw">🎧 Wireless Earbuds</button>
+              <button class="tab" role="tab" aria-selected="false" data-filter="twd">🎧 Wired Earphones</button>
+              <button class="tab" role="tab" aria-selected="false" data-filter="speaker">🔊 Studio Monitors</button>
               <button class="tab" role="tab" aria-selected="false" data-filter="mic">🎙️ Microphones</button>
-              <button class="tab" role="tab" aria-selected="false" data-filter="interface">🎚️ Interfaces</button>
-              <button class="tab" role="tab" aria-selected="false" data-filter="keys">🎹 MIDI keyboards</button>
-              <button class="tab" role="tab" aria-selected="false" data-filter="dac">🎛️ DAC / HP amps</button>
+              <button class="tab" role="tab" aria-selected="false" data-filter="headamp">🎛️ Headphone Amps</button>
+              <button class="tab" role="tab" aria-selected="false" data-filter="dac">🔌 DAC</button>
+              <button class="tab" role="tab" aria-selected="false" data-filter="keys">🎹 MIDI Keyboards</button>
+              <button class="tab" role="tab" aria-selected="false" data-filter="piano">🎹 Digital Pianos</button>
+              <button class="tab" role="tab" aria-selected="false" data-filter="iface">🎚️ Audio Interfaces</button>
+              <button class="tab" role="tab" aria-selected="false" data-filter="pc">💻 Computers</button>
+              <button class="tab" role="tab" aria-selected="false" data-filter="desk">🖥️ Desk Setup</button>
             </div>
           </div>
         </div>
 
         <div class="gear-status">
-          <strong id="gear-count" aria-live="polite">14 items</strong>
-          <span class="gear-status-note">Approximate US street prices · checked Nov 20, 2026</span>
+          <strong id="gear-count" aria-live="polite">45 items</strong>
+          <span class="gear-status-note">US prices checked on amazon.com · Nov 20, 2026</span>
           <button type="button" class="gear-reset" data-reset hidden>Reset filters ↩</button>
         </div>
       </div>
 
-      <p class="en-hint"><strong>How to pick</strong> — Entry / Value is what gets you working: one interface, one pair of headphones, one pair of nearfields is enough to start arranging. Pro Studio is what a working room actually runs on and can take years of sessions. The price bands are rough; the point is not to pay for features you won't use yet.</p>
+      <p class="en-hint"><strong>How to pick</strong> — Entry / Value is what gets you working: one interface, one pair of headphones, one pair of nearfields is enough to start arranging. Pro Studio is what a working room actually runs on and can take years of sessions. Prices are US listings and move with sales and stock, so treat them as a guide and let the Amazon page be the final word. Monitors are priced as a <strong>1 pair</strong> (stereo) set.</p>
 
       <div class="gear-grid" id="gear-grid">
 
@@ -169,9 +177,10 @@
           </figure>
           <div class="gear-head"><span class="cat">🎧 Headphones</span><span class="tier tier-budget">Entry / Value</span></div>
           <h3>MDR-7506 <span class="maker">(Sony)</span></h3>
-          <p class="gear-price">~US$98–115</p>
-          <p class="gear-desc">The long-running broadcast and post-production standard. Folds up, sounds neutral, survives being thrown in a bag.</p>
-          <p class="gear-spec">Closed-back · wired · 3.5 mm with 6.3 mm adapter</p>
+          <p class="gear-price">~US$98</p>
+          <p class="gear-desc">The broadcast and post-production standard for thirty years. Folds flat, sounds honest, survives a bag.</p>
+          <p class="gear-spec">Closed-back · wired · 3.5 mm + 6.3 mm adapter</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B000AJIF4E?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
         </article>
 
         <article class="gear-card" data-category="headphone" data-tier="entry" data-price="159">
@@ -180,31 +189,214 @@
           </figure>
           <div class="gear-head"><span class="cat">🎧 Headphones</span><span class="tier tier-budget">Entry / Value</span></div>
           <h3>ATH-M50x <span class="maker">(Audio-Technica)</span></h3>
-          <p class="gear-price">~US$149–159</p>
-          <p class="gear-desc">The closed-back you see in every studio. Easy to drive, three cables in the box, fine for tracking and mix checks.</p>
+          <p class="gear-price">~US$159</p>
+          <p class="gear-desc">The closed-back in every studio photo. Easy to drive, three cables in the box, fine for tracking and mix checks.</p>
           <p class="gear-spec">Closed-back · detachable cable · 3 cables included</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B00HVLUR86?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
         </article>
 
-        <article class="gear-card" data-category="monitor" data-tier="entry" data-price="199">
+        <article class="gear-card" data-category="headphone" data-tier="entry" data-price="139.99">
           <figure class="gear-thumb">
-            <img src="../assets/products/030-hs5-1조.jpg" alt="Yamaha HS5 product photo" width="400" height="400" loading="lazy" decoding="async" />
+            <img src="../assets/products/300-dt-770-pro.jpg" alt="beyerdynamic DT 770 PRO (80 Ω) product photo" width="400" height="400" loading="lazy" decoding="async" />
           </figure>
-          <div class="gear-head"><span class="cat">🔊 Monitors</span><span class="tier tier-budget">Entry / Value</span></div>
-          <h3>HS5 <span class="maker">(Yamaha)</span></h3>
-          <p class="gear-price">~US$150–200 each</p>
-          <p class="gear-desc">The white-cone nearfield everyone learns on. Honest mids, no flattery, and it fits a small room.</p>
-          <p class="gear-spec">5" woofer · active · sold each</p>
+          <div class="gear-head"><span class="cat">🎧 Headphones</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>DT 770 PRO (80 Ω) <span class="maker">(beyerdynamic)</span></h3>
+          <p class="gear-price">~US$140</p>
+          <p class="gear-desc">Velour pads and a closed cup that keeps click bleed out of the take. The 80 Ω version runs off an interface.</p>
+          <p class="gear-spec">Closed-back · 80 Ω · velour pads · 3 m cable</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B071XKQQ57?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
         </article>
 
-        <article class="gear-card" data-category="interface" data-tier="entry" data-price="190">
+        <article class="gear-card" data-category="headphone" data-tier="entry" data-price="198">
           <figure class="gear-thumb">
-            <img src="../assets/products/053-scarlett-2i2-4세대.jpg" alt="Focusrite Scarlett 2i2 4th Gen product photo" width="400" height="400" loading="lazy" decoding="async" />
+            <img src="../assets/products/301-mdr-m1.jpg" alt="Sony MDR-M1 product photo" width="400" height="400" loading="lazy" decoding="async" />
           </figure>
-          <div class="gear-head"><span class="cat">🎚️ Interfaces</span><span class="tier tier-budget">Entry / Value</span></div>
-          <h3>Scarlett 2i2 4th Gen <span class="maker">(Focusrite)</span></h3>
-          <p class="gear-price">~US$190–225</p>
-          <p class="gear-desc">The default first interface: 2 in / 2 out, stable drivers, low latency, enough for vocals and a stream.</p>
-          <p class="gear-spec">2 in / 2 out · USB-C · 24-bit/192 kHz</p>
+          <div class="gear-head"><span class="cat">🎧 Headphones</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>MDR-M1 <span class="maker">(Sony)</span></h3>
+          <p class="gear-price">~US$198</p>
+          <p class="gear-desc">Sony&#x27;s modern closed monitor: flat enough for decisions, comfortable enough for a ten-hour day.</p>
+          <p class="gear-spec">Closed-back · detachable cable · 6.3 mm adapter</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0DD8SHVZL?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="headphone" data-tier="entry" data-price="279.99">
+          <figure class="gear-thumb">
+            <img src="../assets/products/003-hd-600.jpg" alt="Sennheiser HD 600 product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎧 Headphones</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>HD 600 <span class="maker">(Sennheiser)</span></h3>
+          <p class="gear-price">~US$280</p>
+          <p class="gear-desc">The open-back reference that mixes still translate from. Needs a decent amp, rewards one.</p>
+          <p class="gear-spec">Open-back · 300 Ω · detachable cable</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B00004SY4H?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="headphone" data-tier="pro" data-price="1977.98">
+          <figure class="gear-thumb">
+            <img src="../assets/products/006-hd-800s.jpg" alt="Sennheiser HD 800 S product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎧 Headphones</span><span class="tier tier-pro">Pro Studio</span></div>
+          <h3>HD 800 S <span class="maker">(Sennheiser)</span></h3>
+          <p class="gear-price">~US$1,978</p>
+          <p class="gear-desc">Reference-level space and detail for mastering checks and long listening. Bring a dedicated amp.</p>
+          <p class="gear-spec">Open-back · 300 Ω · balanced cable included</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B00PXLX2TC?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="tw" data-tier="entry" data-price="199.99">
+          <figure class="gear-thumb">
+            <img src="../assets/products/166-wf-1000xm5.jpg" alt="Sony WF-1000XM5 product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎧 Wireless Earbuds</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>WF-1000XM5 <span class="maker">(Sony)</span></h3>
+          <p class="gear-price">~US$200</p>
+          <p class="gear-desc">The commuter reference: strong ANC, a usable EQ, and small enough to keep in a pocket between sessions.</p>
+          <p class="gear-spec">True wireless · ANC · 8 h + case</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0C33XXS56?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="tw" data-tier="entry" data-price="231.2">
+          <figure class="gear-thumb">
+            <img src="../assets/products/174-모멘텀-true-wireless-4.jpg" alt="Sennheiser MOMENTUM True Wireless 4 product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎧 Wireless Earbuds</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>MOMENTUM True Wireless 4 <span class="maker">(Sennheiser)</span></h3>
+          <p class="gear-price">~US$231</p>
+          <p class="gear-desc">Audiophile tuning in a true-wireless shell, with LE Audio and a proper EQ for reference listening on the move.</p>
+          <p class="gear-spec">True wireless · ANC · 7.5 h + case</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0CTHVX6DK?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="tw" data-tier="entry" data-price="279">
+          <figure class="gear-thumb">
+            <img src="../assets/products/302-qc-ultra-earbuds.jpg" alt="Bose QuietComfort Ultra Earbuds product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎧 Wireless Earbuds</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>QuietComfort Ultra Earbuds <span class="maker">(Bose)</span></h3>
+          <p class="gear-price">~US$279</p>
+          <p class="gear-desc">The quietest cabin and the most comfortable fit, with spatial audio for checking a mix in a noisy room.</p>
+          <p class="gear-spec">True wireless · ANC · 6 h + case</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0CD2FSRDD?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="twd" data-tier="entry" data-price="22.99">
+          <figure class="gear-thumb">
+            <img src="../assets/products/233-츄-ii.jpg" alt="Moondrop CHU II product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎧 Wired Earphones</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>CHU II <span class="maker">(Moondrop)</span></h3>
+          <p class="gear-price">~US$23</p>
+          <p class="gear-desc">The cheapest IEM worth trusting: a clean single dynamic driver, a detachable cable, and no boosted bass.</p>
+          <p class="gear-spec">In-ear · 10 mm dynamic · 0.78 mm 2-pin</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0CB8HHS8V?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="twd" data-tier="entry" data-price="91.35">
+          <figure class="gear-thumb">
+            <img src="../assets/products/203-se215.jpg" alt="Shure SE215 PRO product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎧 Wired Earphones</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>SE215 PRO <span class="maker">(Shure)</span></h3>
+          <p class="gear-price">~US$91</p>
+          <p class="gear-desc">Stage-monitor isolation that doubles as a tracking earphone. The cable and tips survive real touring.</p>
+          <p class="gear-spec">In-ear · dynamic · detachable MMCX · hard case</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B004PO10E2?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="twd" data-tier="entry" data-price="679">
+          <figure class="gear-thumb">
+            <img src="../assets/products/208-se846-gen2.jpg" alt="Shure SE846 Gen 2 product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎧 Wired Earphones</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>SE846 Gen 2 <span class="maker">(Shure)</span></h3>
+          <p class="gear-price">~US$679</p>
+          <p class="gear-desc">Four balanced armatures and switchable filters: the reference IEM engineers actually carry in a bag.</p>
+          <p class="gear-spec">In-ear · 4-driver · detachable · 3 filters</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0B9CJ9JR3?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="speaker" data-tier="entry" data-price="99.99">
+          <figure class="gear-thumb">
+            <img src="../assets/products/029-eris-3-5-1조.jpg" alt="PreSonus Eris 3.5 (pair) product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🔊 Studio Monitors</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>Eris 3.5 (pair) <span class="maker">(PreSonus)</span></h3>
+          <p class="gear-price">~US$100 / 1 pair</p>
+          <p class="gear-desc">The desk speaker that fits a bedroom: honest midrange, balanced TRS inputs, and a pair for the price of one.</p>
+          <p class="gear-spec">3.5-inch woofer · 25 W/side · 1 pair</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0C88ZB3D9?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="speaker" data-tier="entry" data-price="284">
+          <figure class="gear-thumb">
+            <img src="../assets/products/303-jbl-305p-mkii.jpg" alt="JBL 305P MkII (pair) product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🔊 Studio Monitors</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>305P MkII (pair) <span class="maker">(JBL)</span></h3>
+          <p class="gear-price">~US$284 / 1 pair</p>
+          <p class="gear-desc">The 5-inch nearfield that images wider than its price. A pair is enough for a small room and a big low end.</p>
+          <p class="gear-spec">5-inch woofer · 2-way · 1 pair</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B088VSBV65?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="speaker" data-tier="entry" data-price="339.99">
+          <figure class="gear-thumb">
+            <img src="../assets/products/030-hs5-1조.jpg" alt="Yamaha HS5 (pair) product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🔊 Studio Monitors</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>HS5 (pair) <span class="maker">(Yamaha)</span></h3>
+          <p class="gear-price">~US$340 / 1 pair</p>
+          <p class="gear-desc">The white-cone nearfield everyone learns to mix on. Honest mids, no flattery, and it fits a small desk.</p>
+          <p class="gear-spec">5-inch woofer · active · 1 pair</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B075Q5T7Q1?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="speaker" data-tier="entry" data-price="398">
+          <figure class="gear-thumb">
+            <img src="../assets/products/304-krk-rp5-g5.jpg" alt="KRK ROKIT 5 G5 (pair) product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🔊 Studio Monitors</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>ROKIT 5 G5 (pair) <span class="maker">(KRK)</span></h3>
+          <p class="gear-price">~US$398 / 1 pair</p>
+          <p class="gear-desc">Front-ported, so it can sit close to a wall — the apartment-studio answer for a fuller low end.</p>
+          <p class="gear-spec">5-inch woofer · front port · 1 pair</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0CYM2RH6W?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="speaker" data-tier="pro" data-price="2115.98">
+          <figure class="gear-thumb">
+            <img src="../assets/products/032-8030c-1조.jpg" alt="Genelec 8030C (pair) product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🔊 Studio Monitors</span><span class="tier tier-pro">Pro Studio</span></div>
+          <h3>8030C (pair) <span class="maker">(Genelec)</span></h3>
+          <p class="gear-price">~US$2,116 / 1 pair (US$1,058 each)</p>
+          <p class="gear-desc">The aluminium-cabinet Nordic classic: neutral, easy to live with, and the nearfield a mastering room keeps around.</p>
+          <p class="gear-spec">5-inch woofer · aluminium enclosure · sold each</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B074CGPZ8G?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="mic" data-tier="entry" data-price="89">
+          <figure class="gear-thumb">
+            <img src="../assets/products/033-sm58sk.jpg" alt="Shure SM58-LC product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎙️ Microphones</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>SM58-LC <span class="maker">(Shure)</span></h3>
+          <p class="gear-price">~US$89</p>
+          <p class="gear-desc">The vocal mic that has survived more tours than any other. Cardioid dynamic, built like a hammer.</p>
+          <p class="gear-spec">Dynamic · cardioid · XLR · includes clip</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B000CZ0R42?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="mic" data-tier="entry" data-price="119">
+          <figure class="gear-thumb">
+            <img src="../assets/products/034-at2020.jpg" alt="Audio-Technica AT2020 product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎙️ Microphones</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>AT2020 <span class="maker">(Audio-Technica)</span></h3>
+          <p class="gear-price">~US$119</p>
+          <p class="gear-desc">The first condenser worth buying: quiet, neutral, and it makes a treated corner sound like a studio.</p>
+          <p class="gear-spec">Condenser · cardioid · XLR · 20 Hz–20 kHz</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0006H92QK?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
         </article>
 
         <article class="gear-card" data-category="mic" data-tier="entry" data-price="369">
@@ -213,108 +405,310 @@
           </figure>
           <div class="gear-head"><span class="cat">🎙️ Microphones</span><span class="tier tier-budget">Entry / Value</span></div>
           <h3>SM7B <span class="maker">(Shure)</span></h3>
-          <p class="gear-price">~US$369–399</p>
-          <p class="gear-desc">Broadcast dynamic that records a thick voice in an untreated room. Voiceover, podcast and loud vocals all day.</p>
-          <p class="gear-spec">Dynamic · cardioid · XLR</p>
+          <p class="gear-price">~US$369</p>
+          <p class="gear-desc">Broadcast dynamic that records a thick vocal in an untreated room. Voiceover, podcast and loud vocals all day.</p>
+          <p class="gear-spec">Dynamic · cardioid · XLR · needs 60 dB+ gain</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0002E4Z8M?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
         </article>
 
-        <article class="gear-card" data-category="keys" data-tier="entry" data-price="219">
+        <article class="gear-card" data-category="mic" data-tier="pro" data-price="1295">
           <figure class="gear-thumb">
-            <img src="../assets/products/044-keylab-essential-3-61.jpg" alt="Arturia KeyLab Essential 61 mk3 product photo" width="400" height="400" loading="lazy" decoding="async" />
-          </figure>
-          <div class="gear-head"><span class="cat">🎹 MIDI keyboards</span><span class="tier tier-budget">Entry / Value</span></div>
-          <h3>KeyLab Essential 61 mk3 <span class="maker">(Arturia)</span></h3>
-          <p class="gear-price">~US$219–299</p>
-          <p class="gear-desc">61 keys plus Analog Lab and a pile of sounds in the box, with faders and encoders that map straight into your DAW.</p>
-          <p class="gear-spec">61 keys · synth action · USB / MIDI</p>
-        </article>
-
-        <article class="gear-card" data-category="dac" data-tier="entry" data-price="199">
-          <figure class="gear-thumb">
-            <img src="../assets/products/135-fiio-k7.jpg" alt="FiiO K7 product photo" width="400" height="400" loading="lazy" decoding="async" />
-          </figure>
-          <div class="gear-head"><span class="cat">🎛️ DAC / HP amps</span><span class="tier tier-budget">Entry / Value</span></div>
-          <h3>K7 <span class="maker">(FiiO)</span></h3>
-          <p class="gear-price">~US$199</p>
-          <p class="gear-desc">Desktop DAC and headphone amp in one box, with enough power for high-impedance monitoring headphones.</p>
-          <p class="gear-spec">DAC + headphone amp · USB / optical / coax</p>
-        </article>
-
-        <article class="gear-card" data-category="headphone" data-tier="entry" data-price="649">
-          <figure class="gear-thumb">
-            <img src="../assets/products/004-ndh-30.jpg" alt="Neumann NDH 30 product photo" width="400" height="400" loading="lazy" decoding="async" />
-          </figure>
-          <div class="gear-head"><span class="cat">🎧 Headphones</span><span class="tier tier-budget">Entry / Value</span></div>
-          <h3>NDH 30 <span class="maker">(Neumann)</span></h3>
-          <p class="gear-price">~US$649–699</p>
-          <p class="gear-desc">Open-back reference that images like a room, so mixes translate from Neumann monitors to headphones without a jump.</p>
-          <p class="gear-spec">Open-back · wired · detachable cable</p>
-        </article>
-
-        <article class="gear-card" data-category="monitor" data-tier="entry" data-price="599">
-          <figure class="gear-thumb">
-            <img src="../assets/products/031-kh-80-dsp-1조.jpg" alt="Neumann KH 80 DSP product photo" width="400" height="400" loading="lazy" decoding="async" />
-          </figure>
-          <div class="gear-head"><span class="cat">🔊 Monitors</span><span class="tier tier-budget">Entry / Value</span></div>
-          <h3>KH 80 DSP <span class="maker">(Neumann)</span></h3>
-          <p class="gear-price">~US$600 each</p>
-          <p class="gear-desc">Small nearfield with DSP correction, so software can fix the room instead of you guessing at the low end.</p>
-          <p class="gear-spec">4" woofer · DSP correction · sold each</p>
-        </article>
-
-        <article class="gear-card" data-category="headphone" data-tier="pro" data-price="1500">
-          <figure class="gear-thumb">
-            <img src="../assets/products/006-hd-800s.jpg" alt="Sennheiser HD 800 S product photo" width="400" height="400" loading="lazy" decoding="async" />
-          </figure>
-          <div class="gear-head"><span class="cat">🎧 Headphones</span><span class="tier tier-pro">Pro Studio</span></div>
-          <h3>HD 800 S <span class="maker">(Sennheiser)</span></h3>
-          <p class="gear-price">~US$1,500–2,000</p>
-          <p class="gear-desc">Open-back flagship: reference-level space and detail for mastering checks and long listening sessions.</p>
-          <p class="gear-spec">Open-back · wired · needs a dedicated amp</p>
-        </article>
-
-        <article class="gear-card" data-category="monitor" data-tier="pro" data-price="875">
-          <figure class="gear-thumb">
-            <img src="../assets/products/032-8030c-1조.jpg" alt="Genelec 8030C product photo" width="400" height="400" loading="lazy" decoding="async" />
-          </figure>
-          <div class="gear-head"><span class="cat">🔊 Monitors</span><span class="tier tier-pro">Pro Studio</span></div>
-          <h3>8030C <span class="maker">(Genelec)</span></h3>
-          <p class="gear-price">~US$875 each</p>
-          <p class="gear-desc">The aluminium-cabinet Nordic classic: neutral, easy to live with, and one of the longest-running pro nearfields.</p>
-          <p class="gear-spec">5" woofer · aluminium enclosure · sold each</p>
-        </article>
-
-        <article class="gear-card" data-category="interface" data-tier="pro" data-price="999">
-          <figure class="gear-thumb">
-            <img src="../assets/products/056-babyface-pro-fs.jpg" alt="RME Babyface Pro FS product photo" width="400" height="400" loading="lazy" decoding="async" />
-          </figure>
-          <div class="gear-head"><span class="cat">🎚️ Interfaces</span><span class="tier tier-pro">Pro Studio</span></div>
-          <h3>Babyface Pro FS <span class="maker">(RME)</span></h3>
-          <p class="gear-price">~US$999</p>
-          <p class="gear-desc">The reliability-and-latency benchmark. Works the same in a fixed room and on location, and TotalMix survives a computer swap.</p>
-          <p class="gear-spec">12 in / 12 out · USB · TotalMix FX</p>
-        </article>
-
-        <article class="gear-card" data-category="mic" data-tier="pro" data-price="1200">
-          <figure class="gear-thumb">
-            <img src="../assets/products/040-tlm-103-studio-set.jpg" alt="Neumann TLM 103 Studio Set product photo" width="400" height="400" loading="lazy" decoding="async" />
+            <img src="../assets/products/040-tlm-103-studio-set.jpg" alt="Neumann TLM 103 product photo" width="400" height="400" loading="lazy" decoding="async" />
           </figure>
           <div class="gear-head"><span class="cat">🎙️ Microphones</span><span class="tier tier-pro">Pro Studio</span></div>
-          <h3>TLM 103 Studio Set <span class="maker">(Neumann)</span></h3>
-          <p class="gear-price">~US$1,200–1,600</p>
-          <p class="gear-desc">Large-diaphragm condenser, the default voice mic in a lot of rooms. Natural detail without harshness, with the EA 1 shock mount.</p>
-          <p class="gear-spec">Condenser · cardioid · XLR · EA 1 mount + case</p>
+          <h3>TLM 103 <span class="maker">(Neumann)</span></h3>
+          <p class="gear-price">~US$1,295</p>
+          <p class="gear-desc">The default voice mic in a lot of rooms: large-diaphragm detail without harshness, plus the shock mount and box.</p>
+          <p class="gear-spec">Condenser · cardioid · XLR · wooden box</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B00AAO3FQ2?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="headamp" data-tier="entry" data-price="149">
+          <figure class="gear-thumb">
+            <img src="../assets/products/134-topping-l30-ii.jpg" alt="Topping L30 II product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎛️ Headphone Amps</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>L30 II <span class="maker">(Topping)</span></h3>
+          <p class="gear-price">~US$149</p>
+          <p class="gear-desc">Clean, quiet NFCA amplification with three gain steps — enough for a 300 Ω reference headphone.</p>
+          <p class="gear-spec">4.4 mm / 6.3 mm out · RCA in · 3 gain steps</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0B7MY7JLC?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="headamp" data-tier="entry" data-price="219">
+          <figure class="gear-thumb">
+            <img src="../assets/products/063-a50s.jpg" alt="Topping A50s product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎛️ Headphone Amps</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>A50s <span class="maker">(Topping)</span></h3>
+          <p class="gear-price">~US$219</p>
+          <p class="gear-desc">Balanced 4.4 mm output and a preamp out, so the same box drives headphones and a pair of powered monitors.</p>
+          <p class="gear-spec">4.4 mm balanced · 6.3 mm · preamp out</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B08J2JBHH1?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="headamp" data-tier="entry" data-price="599">
+          <figure class="gear-thumb">
+            <img src="../assets/products/137-topping-a90-discrete.jpg" alt="Topping A90 Discrete product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎛️ Headphone Amps</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>A90 Discrete <span class="maker">(Topping)</span></h3>
+          <p class="gear-price">~US$599</p>
+          <p class="gear-desc">The endgame desktop amp for planars: 9,800 mW, discrete circuit, and a remote so it can sit out of reach.</p>
+          <p class="gear-spec">XLR / 4.4 mm / 6.3 mm · remote · preamp</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0B4N7RBXX?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="dac" data-tier="entry" data-price="72.24">
+          <figure class="gear-thumb">
+            <img src="../assets/products/140-smsl-su-1.jpg" alt="SMSL SU-1 product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🔌 DAC</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>SU-1 <span class="maker">(SMSL)</span></h3>
+          <p class="gear-price">~US$72</p>
+          <p class="gear-desc">The cheapest clean DAC that still measures properly: AK4493S, USB/optical/coaxial, and no colour.</p>
+          <p class="gear-spec">AK4493S · USB / optical / coax · RCA out</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0C1Y7C9HH?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="dac" data-tier="entry" data-price="142.99">
+          <figure class="gear-thumb">
+            <img src="../assets/products/142-fiio-k11.jpg" alt="FiiO K11 product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🔌 DAC</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>K11 <span class="maker">(FiiO)</span></h3>
+          <p class="gear-price">~US$143</p>
+          <p class="gear-desc">A DAC and amp in one small box, with a 4.4 mm output that will drive most studio headphones.</p>
+          <p class="gear-spec">DAC + amp · 4.4 mm / 6.3 mm · USB / coax / optical</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0CJFG3DC7?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="dac" data-tier="entry" data-price="229">
+          <figure class="gear-thumb">
+            <img src="../assets/products/143-ifi-zen-dac-3.jpg" alt="iFi ZEN DAC 3 product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🔌 DAC</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>ZEN DAC 3 <span class="maker">(iFi)</span></h3>
+          <p class="gear-price">~US$229</p>
+          <p class="gear-desc">Burr-Brown warmth with a real headphone amp, plus balanced output for powered monitors.</p>
+          <p class="gear-spec">PCM 768 / DSD512 · 4.4 mm balanced · RCA</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0D1QWKTQ5?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
         </article>
 
         <article class="gear-card" data-category="dac" data-tier="pro" data-price="1299">
           <figure class="gear-thumb">
             <img src="../assets/products/147-rme-adi-2-fs.jpg" alt="RME ADI-2 DAC FS product photo" width="400" height="400" loading="lazy" decoding="async" />
           </figure>
-          <div class="gear-head"><span class="cat">🎛️ DAC / HP amps</span><span class="tier tier-pro">Pro Studio</span></div>
+          <div class="gear-head"><span class="cat">🔌 DAC</span><span class="tier tier-pro">Pro Studio</span></div>
           <h3>ADI-2 DAC FS <span class="maker">(RME)</span></h3>
           <p class="gear-price">~US$1,299</p>
-          <p class="gear-desc">Monitoring DAC and headphone amp with built-in EQ and dynamics — handy for correcting headphones or borrowing a curve.</p>
-          <p class="gear-spec">DAC + headphone amp · EQ / Dynamics · USB</p>
+          <p class="gear-desc">Monitoring DAC and headphone amp with built-in EQ and dynamics — correct a headphone curve and keep the fix.</p>
+          <p class="gear-spec">2-ch DAC · EQ / dynamics · USB · remote</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B081CWQXGD?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="keys" data-tier="entry" data-price="89">
+          <figure class="gear-thumb">
+            <img src="../assets/products/305-mpk-mini-iv.jpg" alt="Akai Professional MPK mini IV product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎹 MIDI Keyboards</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>MPK mini IV <span class="maker">(Akai Professional)</span></h3>
+          <p class="gear-price">~US$89</p>
+          <p class="gear-desc">25 keys and eight MPC pads that fit in a backpack; the sketch pad for beats made away from the desk.</p>
+          <p class="gear-spec">25 mini keys · 8 pads · USB-C</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0GN92H8WV?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="keys" data-tier="entry" data-price="299">
+          <figure class="gear-thumb">
+            <img src="../assets/products/044-keylab-essential-3-61.jpg" alt="Arturia KeyLab Essential 61 mk3 product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎹 MIDI Keyboards</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>KeyLab Essential 61 mk3 <span class="maker">(Arturia)</span></h3>
+          <p class="gear-price">~US$299</p>
+          <p class="gear-desc">61 keys, faders and encoders mapped into your DAW, with Analog Lab V in the box for instant sounds.</p>
+          <p class="gear-spec">61 keys · 9 faders · USB / MIDI</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0C4G6PCQ1?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="keys" data-tier="entry" data-price="329.99">
+          <figure class="gear-thumb">
+            <img src="../assets/products/045-launchkey-61-mk4.jpg" alt="Novation Launchkey 61 MK4 product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎹 MIDI Keyboards</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>Launchkey 61 MK4 <span class="maker">(Novation)</span></h3>
+          <p class="gear-price">~US$330</p>
+          <p class="gear-desc">Semi-weighted 61 keys with polyphonic-aftertouch pads and the tightest Ableton integration there is.</p>
+          <p class="gear-spec">61 semi-weighted keys · 16 pads · USB-C</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0D6YWDJC2?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="piano" data-tier="entry" data-price="499.99">
+          <figure class="gear-thumb">
+            <img src="../assets/products/058-p-145.jpg" alt="Yamaha P-145 product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎹 Digital Pianos</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>P-145 <span class="maker">(Yamaha)</span></h3>
+          <p class="gear-price">~US$500</p>
+          <p class="gear-desc">88 weighted keys, a decent CFX piano sound and Bluetooth — the portable that lives under a desk.</p>
+          <p class="gear-spec">88 keys · GHS action · Bluetooth · 2 × 7 W</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0F9H3SHFJ?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="piano" data-tier="entry" data-price="629.99">
+          <figure class="gear-thumb">
+            <img src="../assets/products/306-p-225.jpg" alt="Yamaha P-225 product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎹 Digital Pianos</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>P-225 <span class="maker">(Yamaha)</span></h3>
+          <p class="gear-price">~US$630</p>
+          <p class="gear-desc">Yamaha&#x27;s slim 88-key stage piano: better action than the P-145 and light enough to carry to a session.</p>
+          <p class="gear-spec">88 keys · GHC action · Bluetooth · 2 × 7 W</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0CBN7HYKB?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="piano" data-tier="entry" data-price="679.99">
+          <figure class="gear-thumb">
+            <img src="../assets/products/059-fp-30x.jpg" alt="Roland FP-30X product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎹 Digital Pianos</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>FP-30X <span class="maker">(Roland)</span></h3>
+          <p class="gear-price">~US$680</p>
+          <p class="gear-desc">PHA-4 hammer action with escapement, SuperNATURAL sound and Bluetooth audio/MIDI. The MIDI-room piano.</p>
+          <p class="gear-spec">88 keys · PHA-4 · Bluetooth audio/MIDI</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0DJTJBPGC?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="piano" data-tier="pro" data-price="2299.99">
+          <figure class="gear-thumb">
+            <img src="../assets/products/061-fp-90x.jpg" alt="Roland FP-90X product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎹 Digital Pianos</span><span class="tier tier-pro">Pro Studio</span></div>
+          <h3>FP-90X <span class="maker">(Roland)</span></h3>
+          <p class="gear-price">~US$2,300</p>
+          <p class="gear-desc">The flagship portable: PHA-50 hybrid keys, modelled piano engine and speakers loud enough for a small stage.</p>
+          <p class="gear-spec">88 keys · PHA-50 · modelled piano · 2 × 25 W</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B08SW4VBPB?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="iface" data-tier="entry" data-price="159.99">
+          <figure class="gear-thumb">
+            <img src="../assets/products/051-scarlett-solo-4세대.jpg" alt="Focusrite Scarlett Solo 4th Gen product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎚️ Audio Interfaces</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>Scarlett Solo 4th Gen <span class="maker">(Focusrite)</span></h3>
+          <p class="gear-price">~US$160</p>
+          <p class="gear-desc">One mic preamp, one instrument input, and drivers that just work — the first interface for a singer-songwriter.</p>
+          <p class="gear-spec">1 in / 2 out · USB-C · 24-bit/192 kHz</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0C5JSHP7M?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="iface" data-tier="entry" data-price="194.2">
+          <figure class="gear-thumb">
+            <img src="../assets/products/052-id4-mk2.jpg" alt="Audient iD4 MKII product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎚️ Audio Interfaces</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>iD4 MKII <span class="maker">(Audient)</span></h3>
+          <p class="gear-price">~US$194</p>
+          <p class="gear-desc">A console-grade preamp and a JFET DI in a two-input box, with two headphone outs for co-writing.</p>
+          <p class="gear-spec">2 in / 2 out · USB-C · 2 headphone outs</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B08SBSN88X?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="iface" data-tier="entry" data-price="224.99">
+          <figure class="gear-thumb">
+            <img src="../assets/products/053-scarlett-2i2-4세대.jpg" alt="Focusrite Scarlett 2i2 4th Gen product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎚️ Audio Interfaces</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>Scarlett 2i2 4th Gen <span class="maker">(Focusrite)</span></h3>
+          <p class="gear-price">~US$225</p>
+          <p class="gear-desc">The default first interface: two clean preamps, auto gain, and enough headroom for a loud vocal.</p>
+          <p class="gear-spec">2 in / 2 out · USB-C · 24-bit/192 kHz</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0C5JRTS3Y?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="iface" data-tier="entry" data-price="999">
+          <figure class="gear-thumb">
+            <img src="../assets/products/056-babyface-pro-fs.jpg" alt="RME Babyface Pro FS product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🎚️ Audio Interfaces</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>Babyface Pro FS <span class="maker">(RME)</span></h3>
+          <p class="gear-price">~US$999</p>
+          <p class="gear-desc">The reliability and latency benchmark. Works the same in a fixed room and on location; TotalMix survives a computer swap.</p>
+          <p class="gear-spec">12 in / 12 out · USB · TotalMix FX</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B083Q4VK6Y?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="pc" data-tier="entry" data-price="743">
+          <figure class="gear-thumb">
+            <img src="../assets/products/307-mac-mini-m4.jpg" alt="Apple Mac mini M4 (16 GB / 256 GB) product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">💻 Computers</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>Mac mini M4 (16 GB / 256 GB) <span class="maker">(Apple)</span></h3>
+          <p class="gear-price">~US$743 (marketplace)</p>
+          <p class="gear-desc">The quietest studio computer per dollar: M4, 16 GB unified memory, and no fan noise under a Pro Tools session.</p>
+          <p class="gear-spec">M4 · 16 GB · 256 GB SSD · Thunderbolt 4</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0DLBTPDCS?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="pc" data-tier="entry" data-price="999.55">
+          <figure class="gear-thumb">
+            <img src="../assets/products/308-macbook-air-m4.jpg" alt="Apple MacBook Air 13&quot; M4 product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">💻 Computers</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>MacBook Air 13&quot; M4 <span class="maker">(Apple)</span></h3>
+          <p class="gear-price">~US$1,000</p>
+          <p class="gear-desc">Silent, light and fast enough to track and mix away from the studio; the writing laptop that becomes the backup rig.</p>
+          <p class="gear-spec">M4 · 16 GB · 256 GB · 13.6&quot; Liquid Retina</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0DZDB9JTT?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="pc" data-tier="pro" data-price="2388">
+          <figure class="gear-thumb">
+            <img src="../assets/products/309-macbook-pro-14.jpg" alt="Apple MacBook Pro 14&quot; M4 Pro product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">💻 Computers</span><span class="tier tier-pro">Pro Studio</span></div>
+          <h3>MacBook Pro 14&quot; M4 Pro <span class="maker">(Apple)</span></h3>
+          <p class="gear-price">~US$2,388 (with AppleCare+)</p>
+          <p class="gear-desc">Liquid Retina XDR for editing by eye, fans that stay quiet in a long session, and the Pro chip for big sessions.</p>
+          <p class="gear-spec">M4 Pro · 24 GB · 512 GB · 14.2&quot; XDR</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0DLJ2B57F?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="desk" data-tier="entry" data-price="135.99">
+          <figure class="gear-thumb">
+            <img src="../assets/products/310-isoacoustics-iso155.jpg" alt="IsoAcoustics ISO-155 Isolation Stands product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🖥️ Desk Setup</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>ISO-155 Isolation Stands <span class="maker">(IsoAcoustics)</span></h3>
+          <p class="gear-price">~US$136 / 1 pair</p>
+          <p class="gear-desc">Tilt and height adjustment that decouples the monitors from the desk — the cheapest real upgrade to a small room.</p>
+          <p class="gear-spec">40 lb capacity · 14 height/tilt positions · 1 pair</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B07D3TMSJ4?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="desk" data-tier="entry" data-price="199.99">
+          <figure class="gear-thumb">
+            <img src="../assets/products/311-ergotron-lx.jpg" alt="Ergotron LX Monitor Arm product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🖥️ Desk Setup</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>LX Monitor Arm <span class="maker">(Ergotron)</span></h3>
+          <p class="gear-price">~US$200</p>
+          <p class="gear-desc">Puts the screen at ear height and clears the desk for a keyboard, a fader pack and a cup of coffee.</p>
+          <p class="gear-spec">Up to 34&quot; / 25 lb · VESA 75 / 100 · polished aluminium</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B00V5HHDPW?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
+        </article>
+
+        <article class="gear-card" data-category="desk" data-tier="entry" data-price="649">
+          <figure class="gear-thumb">
+            <img src="../assets/products/312-aeron-classic.jpg" alt="Herman Miller Aeron (Size B) product photo" width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+          <div class="gear-head"><span class="cat">🖥️ Desk Setup</span><span class="tier tier-budget">Entry / Value</span></div>
+          <h3>Aeron (Size B) <span class="maker">(Herman Miller)</span></h3>
+          <p class="gear-price">~US$649</p>
+          <p class="gear-desc">The chair that makes ten-hour mix days possible; mesh keeps you cool and the PostureFit holds the low back.</p>
+          <p class="gear-spec">Size B · PostureFit · mesh · 12-year warranty</p>
+          <a class="btn btn-primary btn-block gear-buy" href="https://www.amazon.com/dp/B0029QNBAY?tag=vstzip-20" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a>
         </article>
 
       </div>
@@ -327,7 +721,7 @@
       </div>
 
       <div class="gear-note">
-        <p><strong>About buying links</strong> — Models and photos come from the VSTzip gear database. <strong>Affiliate links coming once Amazon Associates / partner approval completes</strong> — until then there is no purchase button on this page. When they go live, a purchase through them may earn VSTzip a small commission <strong>at no extra cost to you</strong>. Partnership or questions: <a href="mailto:vstzip.official@gmail.com">vstzip.official@gmail.com</a>.</p>
+        <p><strong>About buying links</strong> — Every gear card links to its Amazon US listing with our associate tag. As an Amazon Associate VSTzip earns from qualifying purchases; the price you pay does not change. Prices shown were checked on Nov 20, 2026 and can change at any time — the Amazon listing is the authoritative price and availability. Partnership or questions: <a href="mailto:vstzip.official@gmail.com">vstzip.official@gmail.com</a>.</p>
       </div>
     </div>
   </section>
@@ -363,7 +757,7 @@
       <span>Contact &amp; partnership: <a href="mailto:vstzip.official@gmail.com">vstzip.official@gmail.com</a></span>
     </div>
     <p class="footer-disclosure">
-      Buying links on this page will be <strong>affiliate links</strong> (Amazon Associates and partner programs); when they go live, VSTzip may earn a small commission and the price you pay does not change.
+      Buying links on this page are <strong>Amazon affiliate links</strong> (Amazon Associates, tag vstzip-20). As an Amazon Associate VSTzip earns from qualifying purchases, and the price you pay does not change.
       Free plugin details follow each developer's official page.
     </p>
     <p class="copyright">© 2026 VSTzip. All rights reserved.</p>

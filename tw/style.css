@@ -39,3 +39,18 @@ body{
 @media (max-width:720px){
   .gear-card h3{font-size:16px}
 }
+
+/* 12 個分類：手機上一列可滑動，不讓分類 chips 佔滿畫面 */
+@media (max-width:720px){
+  .gear-filter .tabs{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:4px;
+    margin-right:-14px;
+    padding-right:14px;
+    scrollbar-width:none;
+  }
+  .gear-filter .tabs::-webkit-scrollbar{display:none}
+  .tab{font-size:11.5px;padding:7px 10px;white-space:nowrap}
+}
