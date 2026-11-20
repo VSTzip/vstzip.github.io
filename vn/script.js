@@ -35,8 +35,8 @@
       if (show) visible.push(card);
     });
 
-    // only reorder what is visible: cheapest first, ties keep their original order
-    visible.sort(function (a, b) {
+    // giữ thứ tự hạng mục khi xem "Tất cả"; chỉ sắp theo giá khi đã chọn hạng mục
+    if (state.category !== 'all') visible.sort(function (a, b) {
       var d = priceOf(a) - priceOf(b);
       return d !== 0 ? d : cards.indexOf(a) - cards.indexOf(b);
     });

@@ -35,8 +35,8 @@
       if (show) visible.push(card);
     });
 
-    // 只排出目前看得到的卡片，價格低的排前面（同價保留原本順序）
-    visible.sort(function (a, b) {
+    // 「全部」時保留原稿的分類順序；選了類別才按價格排列
+    if (state.category !== 'all') visible.sort(function (a, b) {
       var d = priceOf(a) - priceOf(b);
       return d !== 0 ? d : cards.indexOf(a) - cards.indexOf(b);
     });
