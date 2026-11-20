@@ -13,10 +13,10 @@
 | `style.css` | 공통 테마 (화이트 종이 + 흑연 + VU 앰버) |
 | `script.js` | 장비 3단 필터 (카테고리 → 등급 → 가격대), 개수 표시, 빈 결과 안내 |
 | `tw/` | 繁體中文 페이지 (`/tw/`) — `index.html`·`style.css`·`script.js`, 무료 플러그인 2종 + 장비 14종 |
-| `en/` | 영문(미국·유럽) 페이지 (`/en/`) — 무료 플러그인 2종 + 장비 14종, 등급 기준 `entry`(< US$750) / `pro`(US$750+) |
+| `en/` | 영문(미국·유럽) 페이지 (`/en/`) — 무료 플러그인 2종 + 장비 227종(12개 카테고리), 등급 기준 `entry`(US$1,000 미만) / `pro`(US$1,000 이상), 아마존 US `?tag=vstzip-20` 제휴 링크 227개 |
 | `jp/` | 일본어 페이지 (`/jp/`) — 무료 플러그인 2종 + 장비 25종, 등급 기준 `entry`(¥100,000 미만) / `pro`(¥100,000 이상), 12개 카테고리 전체 |
 | `vn/` | 베트남어 페이지 (`/vn/`) — 무료 플러그인 2종 + 장비 45종(12개 카테고리), 등급 기준 `entry`(₫20,000,000 미만) / `pro`(₫20,000,000 이상), 가격은 베트남 참고 시세(₫). 제휴(Shopee/Lazada/AliExpress) 승인 전이라 구매 버튼 없이 “sẽ cập nhật sau khi duyệt đối tác” 안내만 둔다. |
-| `es/` | 스페인어 페이지 (`/es/`) — 무료 플러그인 2종 + 장비 45종(12개 카테고리), 등급 기준 `entry`(US$1,000 미만) / `pro`(US$1,000 이상), 아마존 US `?tag=vstzip-20` 제휴 링크 45개 |
+| `es/` | 스페인어 페이지 (`/es/`) — 무료 플러그인 2종 + 장비 227종(12개 카테고리), 등급 기준 `entry`(US$1,000 미만) / `pro`(US$1,000 이상), 아마존 US `?tag=vstzip-20` 제휴 링크 227개 |
 | `assets/logo.png` | 채널 테이프 머신 로고 (512px) |
 | `assets/products/` | 장비·플러그인 상품 사진 (400px JPEG) |
 
@@ -47,7 +47,7 @@
 
 무료 플러그인 카드를 `tw/`·`en/`·`jp/`·`vn/`·`es/`에도 같이 넣을 때는 각 페이지 언어로 문구를 옮기고, 이미지는 `../assets/products/`의 같은 파일을 재사용합니다. `en/`·`es/` 장비 카드는 아마존 어소시에이트(`?tag=vstzip-20`) 링크이므로 가격 변동 시 `data-price`와 표시 가격을 함께 고칩니다.
 
-`vn/`·`es/`는 `tools/build_vn_es.py`가 `scratch/catalog.json`(검증된 45종)에서 생성합니다. 문구·가격은 스크립트 안의 `VI_DESC`/`ES_DESC`, `VI_PRICE`(베트남 실사 가격)를 고친 뒤 `python3 tools/build_vn_es.py`로 다시 만들고, `vn/style.css`·`es/style.css`는 `en/style.css`를 복사해 생성되므로 페이지 전용 스타일은 스크립트 끝의 CSS 블록에 추가합니다.
+`en/`·`es/`의 장비 목록은 `scratch/global-catalog-250.json`(아마존 US 상품 페이지에서 2026-11-20 검증한 227종)을 원본으로 씁니다. `/tw/`·`/jp/`·`/vn/` 확장도 같은 파일을 그대로 이어받습니다. `vn/`는 `tools/build_vn_es.py`가 `scratch/catalog.json`(검증된 45종)에서 생성합니다. 문구·가격은 스크립트 안의 `VI_DESC`/`ES_DESC`, `VI_PRICE`(베트남 실사 가격)를 고친 뒤 `python3 tools/build_vn_es.py`로 다시 만들고, `vn/style.css`·`es/style.css`는 `en/style.css`를 복사해 생성되므로 페이지 전용 스타일은 스크립트 끝의 CSS 블록에 추가합니다.
 
 ## 고지
 
