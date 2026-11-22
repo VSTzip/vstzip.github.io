@@ -205,6 +205,12 @@ section[id]{scroll-margin-top:84px}
 }
 .deadline{color:var(--amber)!important;font-weight:700}
 .plugin-card.urgent .deadline{color:var(--danger)!important}
+/* 마감된 카드: 지우지 않고 흐리게 + 마감 배지 */
+.badge-ended{background:#27272A;color:#fff;border-color:#27272A}
+.plugin-card.ended{opacity:.62}
+.plugin-card.ended .plugin-thumb img{filter:grayscale(1)}
+.plugin-card.ended .deadline{color:#71717A!important;text-decoration:line-through}
+.plugin-card.ended .btn-primary{background:var(--surface-2)!important;color:var(--muted)!important;border-color:var(--line-strong)!important;box-shadow:none!important}
 .note{color:#71717A;font-size:11.5px}
 
 .disclaimer{

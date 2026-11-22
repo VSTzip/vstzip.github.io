@@ -40,7 +40,7 @@
 ## 갱신 방법
 
 1. `index.html`의 무료 플러그인 카드(`article.plugin-card`)를 고치거나 복사해 추가합니다.
-2. 마감이 지난 카드는 지우고, 새로 풀린 플러그인을 맨 앞에 넣습니다.
+2. 마감이 지난 카드는 **절대 지우지 않고** `article.plugin-card`에 `ended` 클래스를 붙이고 `badge-hot` 배지를 `<span class="badge badge-ended">마감</span>`(권역 언어: Ended · Finalizado · 已截止 · 終了 · Đã kết thúc)으로 바꿉니다(`modules/site_check.py --apply`가 자동 처리, 애매하면 `--mark-ended "이름"`). 새로 풀린 플러그인은 맨 앞에 넣습니다.
 3. 푸터의 기준일(`time`)도 함께 갱신합니다.
 4. 장비 가격이 바뀌면 해당 카드의 `data-price`와 표시 가격을 같이 고칩니다(`data-band`도 함께).
 5. `git commit && git push` 하면 GitHub Pages가 자동으로 다시 배포합니다.
