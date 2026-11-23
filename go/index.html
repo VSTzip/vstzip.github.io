@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>VSTzip — Free plugins & studio gear</title>
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="https://vstzip.github.io/" />
+<script>
+// 인스타·스레드 프로필 링크용: 보는 사람의 휴대폰/브라우저 언어에 맞는 국가 페이지로 바로 보냄
+(function () {
+  var map = [
+    [/^ko/i, "/"],
+    [/^ja/i, "/jp/"],
+    [/^zh/i, "/tw/"],
+    [/^vi/i, "/vn/"],
+    [/^es/i, "/es/"],
+    [/^en/i, "/en/"]
+  ];
+  var force = (location.search.match(/[?&]to=(kr|en|es|tw|jp|vn)\b/i) || [])[1];
+  var forced = { kr: "/", en: "/en/", es: "/es/", tw: "/tw/", jp: "/jp/", vn: "/vn/" };
+  var dest = force ? forced[force.toLowerCase()] : null;
+  if (!dest) {
+    var langs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || "en"];
+    for (var i = 0; i < langs.length && !dest; i++) {
+      for (var j = 0; j < map.length; j++) {
+        if (map[j][0].test(langs[i])) { dest = map[j][1]; break; }
+      }
+    }
+  }
+  location.replace(dest || "/en/");
+})();
+</script>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans",sans-serif;background:#F4F4F5;color:#18181B;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0}
+.box{text-align:center;padding:24px}
+a{display:block;margin:8px auto;padding:12px 20px;border-radius:999px;background:#18181B;color:#fff;text-decoration:none;font-weight:700;max-width:240px}
+</style>
+</head>
+<body>
+<div class="box">
+  <p>VSTzip</p>
+  <a href="/" lang="ko">한국어</a>
+  <a href="/en/" lang="en">English</a>
+  <a href="/es/" lang="es">Español</a>
+  <a href="/tw/" lang="zh-Hant">繁體中文</a>
+  <a href="/jp/" lang="ja">日本語</a>
+  <a href="/vn/" lang="vi">Tiếng Việt</a>
+</div>
+</body>
+</html>
